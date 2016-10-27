@@ -1,0 +1,128 @@
+body{
+  font-size: 18px;
+  background-color: #005F6B;
+  color: white;
+  text-align: center;
+}
+
+h2{
+
+}
+
+header{
+  text-align: left;
+  background-color: #343838;
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+a{
+  color: white;
+}
+
+a:hover{
+  color: darkblue;
+  transition-duration: 1s;
+}
+
+#navi{
+  text-align: center;
+}
+
+#signUpLogIn{
+  text-align: right;
+  padding-right: 50px;
+}
+
+#whatWeAreAbout{
+text-align: center;
+}
+
+#left{
+  display: inline-block;
+  width: 33%;
+  background-position: left;
+    font-size: 18px;
+}
+
+#right{
+  display: inline-block;
+  width: 33%;
+  background-position: right;
+  font-size: 18px;
+}
+
+#mid{
+  display: inline-block;
+  width: 33%;
+  background-position: center;
+  font-size: 18px;
+}
+
+#personalityTest{
+  text-align: center;
+}
+
+.wholePage{
+  font-size: 0px;
+}
+
+.personalityTest{
+  text-decoration: none;
+  display: inline-block;
+  padding: 18px;
+  background-color:  #343838;
+}
+
+.personalityTest:hover{
+  background-color: #79BD9A;
+}
+
+
+.coloredBox{
+  text-decoration: none;
+  display: inline-block;
+  padding: 18px;
+  background-color: #005F6B;
+}
+
+.coloredBox:hover{
+    background-color: #79BD9A;
+    transition-duration: 1s;
+
+}
+
+.event-image{
+  display: inline-block;
+  width:25%;
+  height: 170px;
+  margin-right: 3%;
+}
+
+.event-summary{
+  display: inline-block;
+  width:69%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.event-list{
+  /*some styles*/
+}
+.event-list li{
+  vertical-align: top;
+
+}
+
+.event-info{
+  padding: 10px 15px;
+  background-color: #3B8686;
+  text-decoration: none;
+  color:white;
+  border-radius: 12px;
+}
+
+.event-title{
+  text-align: left;
+}
