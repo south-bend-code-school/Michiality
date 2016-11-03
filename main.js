@@ -1,11 +1,26 @@
-var data = [
-  ["Chipotle", "Delicious, wide, burritos", "http://test.jpg", "http://www.chipotle.com"],
-  ["McDonalds", "Mckey Dees", "http://test.jpg", "http://www.mcdonalds.com"]
-]
 
-for (var i=0; i < data.length; i++) {
-  addSuggestedRestaurant(data[i]);
+var data = [];
+function getData(categoryName) {
+  $("li").remove();
+$.getJSON("http://typeform-get.herokuapp.com/yelp?category=" + categoryName, function(results) {
+  data = [];
+  for (var key in results) {
+    var name = key;
+    data.push([key, results[key].snippet, results[key].image_url, results[key].business_url]);
+  }
+  for (var i=0; i < data.length; i++) {
+    addSuggestedRestaurant(data[i]);
+  }
+})
 }
+
+$(".dropdown-content a").click(function() {
+  var category = $(this).html();
+  category = category.split("(")[1].split(")")[0];
+  console.log(category);
+
+  getData(category);
+})
 
 function addSuggestedRestaurant(restaurant) {
   var name = restaurant[0];
@@ -13,20 +28,14 @@ function addSuggestedRestaurant(restaurant) {
   var image = restaurant[2];
   var url = restaurant[3];
 
-  var h1 = document.createElement("h1");
-  h1.innerHTML = name;
-  document.body.appendChild(h1);
-
-  var description = document.createElement("p");
-  description.innerHTML = descriptionText;
-  document.body.appendChild(description);
-
-  var image = document.createElement("image");
-  image.src = image;
-  document.body.appendChild(image);
-
-  var link = document.createElement("a");
-  link.href = url;
-  link.innerHTML = "Visit Website";
-  document.body.appendChild(link);
+  $( ".Location-List" ).append(
+    "<li>" +
+    "<img class='Location-Image' src='" + image + "' width= 300px>" +
+    "<div class='Location-Description'>" +
+    "<h2>" + name + "</h2>" +
+    '<p class="Location-Paragraph">' + descriptionText + "</p>" +
+    '<a class="Website-Button" href="' + url + '" target="_blank"> Visit Webstite. </a>' +
+    '</div>' +
+    '</li>'
+  );
 }

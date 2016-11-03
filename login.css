@@ -1,0 +1,11 @@
+input{
+  display:block;
+  height: 28px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body{
+  background-color: #CFF093;
+}

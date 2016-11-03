@@ -1,5 +1,5 @@
 body{
-  color:black;
+  color:Black;
 }
 .Location-Image{
   display: inline-block;
@@ -16,7 +16,6 @@ display: inline-block;
   .Location-Description{
   width: 63%; display: inline-block;
   vertical-align: top;
-  text-align: left;
   }
 .Website-Button
   {
@@ -74,12 +73,4 @@ margin-bottom: 20px
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
-}
-
-.title{
-  color: white;
-}
-
-h1{
-  color: white;
 }

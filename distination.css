@@ -44,6 +44,8 @@ text-align: center;
   width: 33%;
   background-position: left;
     font-size: 18px;
+  position: relative;
+  float: left;
 }
 
 #right{
@@ -51,6 +53,8 @@ text-align: center;
   width: 33%;
   background-position: right;
   font-size: 18px;
+  position: relative;
+  float: left;
 }
 
 #mid{
@@ -58,6 +62,8 @@ text-align: center;
   width: 33%;
   background-position: center;
   font-size: 18px;
+  position: relative;
+  float: left;
 }
 
 #personalityTest{
