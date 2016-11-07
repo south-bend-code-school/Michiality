@@ -34,7 +34,7 @@ function addSuggestedRestaurant(restaurant) {
     "<div class='Location-Description'>" +
     "<h2>" + name + "</h2>" +
     '<p class="Location-Paragraph">' + descriptionText + "</p>" +
-    '<a class="Website-Button" href="' + url + '" target="_blank"> Visit Webstite. </a>' +
+    '<a class="Website-Button" href="' + url + '" target="_blank"> Visit Website </a>' +
     '</div>' +
     '</li>'
   );

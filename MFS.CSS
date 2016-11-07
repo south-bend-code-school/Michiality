@@ -3,7 +3,7 @@ body{
 }
 .Location-Image{
   display: inline-block;
-  width: 30%;
+  width: 20%;
   margin-right: 5%;
 }
 .Location-Paragraph{
@@ -14,7 +14,7 @@ display: inline-block;
     display: inline-block;
   }
   .Location-Description{
-  width: 63%; display: inline-block;
+  width: 73%; display: inline-block;
   vertical-align: top;
   }
 .Website-Button
