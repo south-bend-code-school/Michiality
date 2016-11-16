@@ -11,13 +11,17 @@
 
     <h>Login</h2>
     <div class= "boxes">
-  <form action="demo_form.asp">
+  <form id="login">
 
-Username: <div class= "boxes"><input type="text"  name="Username" ><br></div>
-Password: <div class="boxes"><input type="text" name= "Password" ><br>
+Email: <div class= "boxes"><input type="text" id="email" name="Username" ><br></div>
+Password: <div class="boxes"><input type="password" id="password" name= "Password" ><br>
 </div>
 <input type="submit" value="Submit">
   </div>
 </form>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="profile.js"></script>
   </body>
   </html>

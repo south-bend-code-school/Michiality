@@ -5,6 +5,7 @@ body{
   display: inline-block;
   width: 20%;
   margin-right: 5%;
+  height: 300px
 }
 .Location-Paragraph{
 display: inline-block;
@@ -14,9 +15,19 @@ display: inline-block;
     display: inline-block;
   }
   .Location-Description{
-  width: 73%; display: inline-block;
+   width: 63%;
+   display: inline-block;
   vertical-align: top;
   }
+.map-image {
+  display: inline;
+  width: 0px;
+  height: 300px;
+  transition: width 2s;
+}
+li {
+  background-color: #f0f0f0;
+}
 .Website-Button
   {
     padding: 15px;
