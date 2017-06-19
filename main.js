@@ -1,4 +1,3 @@
-
 var data = [];
 function getData(categoryName) {
   $("li").remove();
@@ -6,7 +5,7 @@ $.getJSON("http://typeform-get.herokuapp.com/yelp?category=" + categoryName, fun
   data = [];
   for (var key in results) {
     var name = key;
-    data.push([key, results[key].snippet, results[key].image_url, results[key].business_url]);
+    data.push([key, results[key].snippet, results[key].image_url, results[key].business_url, results[key].location]);
   }
   for (var i=0; i < data.length; i++) {
     addSuggestedRestaurant(data[i]);
@@ -27,6 +26,8 @@ function addSuggestedRestaurant(restaurant) {
   var descriptionText = restaurant[1];
   var image = restaurant[2];
   var url = restaurant[3];
+  var location = restaurant[4];
+  var map_image_url = "https://maps.googleapis.com/maps/api/staticmap?size=250x250&center=" + location.latitude + "," + location.longitude + "&zoom=16&maptype=hybrid&markers=" + location.latitude + "," + location.longitude;
 
   $( ".Location-List" ).append(
     "<li>" +
@@ -36,6 +37,16 @@ function addSuggestedRestaurant(restaurant) {
     '<p class="Location-Paragraph">' + descriptionText + "</p>" +
     '<a class="Website-Button" href="' + url + '" target="_blank"> Visit Website </a>' +
     '</div>' +
+    '<img class="map-image" src="' + map_image_url + '">' + 
     '</li>'
   );
+  $("li").on({
+      mouseenter: function () {
+        $('> .map-image', this).css("width", "300px");
+        $(".Location-Description").css("width", "40%");
+      },
+      mouseleave: function () {
+        console.log("mouse left");
+      }
+  });
 }
